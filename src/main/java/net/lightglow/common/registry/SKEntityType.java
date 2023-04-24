@@ -3,10 +3,7 @@ package net.lightglow.common.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.lightglow.SkeletalRemains;
-import net.lightglow.common.entity.CharredSkeleton;
-import net.lightglow.common.entity.OvergrownSkeleton;
-import net.lightglow.common.entity.SharpshooterSkeleton;
-import net.lightglow.common.entity.SunkenSkeleton;
+import net.lightglow.common.entity.*;
 import net.lightglow.common.entity.projectile.TidalArrow;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -32,7 +29,12 @@ public class SKEntityType {
     public static final EntityType<CharredSkeleton> CHARRED_SKELETON = Registry.register(Registry.ENTITY_TYPE,
             new Identifier(SkeletalRemains.MOD_ID, "charredskeleton"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CharredSkeleton::new)
-                    .fireImmune().dimensions(EntityDimensions.fixed(0.75f, 2.1f)).build());
+                    .fireImmune().dimensions(EntityDimensions.fixed(0.8f, 2.2f)).build());
+
+    public static final EntityType<FallenSkeleton> FALLEN_SKELETON = Registry.register(Registry.ENTITY_TYPE,
+            new Identifier(SkeletalRemains.MOD_ID, "fallenskeleton"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, FallenSkeleton::new)
+                    .fireImmune().dimensions(EntityDimensions.fixed(0.8f, 2.2f)).build());
 
 
 
