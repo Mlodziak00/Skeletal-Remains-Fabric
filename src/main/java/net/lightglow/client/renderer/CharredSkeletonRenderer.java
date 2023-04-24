@@ -18,7 +18,6 @@ public class CharredSkeletonRenderer extends BipedEntityRenderer<CharredSkeleton
 
     public CharredSkeletonRenderer(EntityRendererFactory.Context ctx, EntityModelLayer layer, EntityModelLayer legArmorLayer, EntityModelLayer bodyArmorLayer) {
         super(ctx, new CharredSkeletonModel(ctx.getPart(layer)), 0.5F);
-        this.addFeature(new ArmorFeatureRenderer(this, new CharredSkeletonModel(ctx.getPart(legArmorLayer)), new CharredSkeletonModel(ctx.getPart(bodyArmorLayer))));
     }
 
     @Override

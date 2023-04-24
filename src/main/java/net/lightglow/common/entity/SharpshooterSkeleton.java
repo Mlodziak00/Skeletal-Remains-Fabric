@@ -22,7 +22,7 @@ public class SharpshooterSkeleton extends SkeletonEntity {
 
     public static DefaultAttributeContainer.Builder setAttributes(){
         return SkeletonEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 12.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1.00f)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 2.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25f);

@@ -26,6 +26,9 @@ public class SKItemsRegistry {
     public static final Item SUNKEN_SPAWN_EGG = registerItem("sunken_spawn_egg",
             new SpawnEggItem(SKEntityType.SUNKEN_SKELETON, 0x354747, 0x257a7a,
                     new FabricItemSettings().group(ItemGroup.MISC)));
+    public static final Item FALLEN_SPAWN_EGG = registerItem("fallen_spawn_egg",
+            new SpawnEggItem(SKEntityType.FALLEN_SKELETON, 0x7a7a85, 0xb4b4d4,
+                    new FabricItemSettings().group(ItemGroup.MISC)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(SkeletalRemains.MOD_ID, name), item);

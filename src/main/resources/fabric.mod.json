@@ -3,7 +3,7 @@
 	"id": "skeletalremains",
 	"version": "${version}",
 	"name": "Skeletal Remains",
-	"description": "A mod that adds in different biome variants of Skeletons!",
+		"description": "A mod that adds in different biome variants of Skeletons!",
 	"authors": [
 		"Lightglow"
 	],
