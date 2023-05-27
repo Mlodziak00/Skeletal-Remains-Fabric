@@ -36,6 +36,11 @@ public class SKEntityType {
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, FallenSkeleton::new)
                     .fireImmune().dimensions(EntityDimensions.fixed(0.8f, 2.2f)).build());
 
+    public static final EntityType<SwampedSkeleton> SWAMPED_SKELETON = Registry.register(Registry.ENTITY_TYPE,
+            new Identifier(SkeletalRemains.MOD_ID, "swampedskeleton"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SwampedSkeleton::new)
+                    .fireImmune().dimensions(EntityDimensions.fixed(0.75f, 2.0f)).build());
+
 
 
     public static final EntityType<TidalArrow> TIDAL_ARROW = Registry.register(Registry.ENTITY_TYPE,

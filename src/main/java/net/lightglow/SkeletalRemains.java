@@ -9,6 +9,7 @@ import net.lightglow.common.entity.*;
 import net.lightglow.common.gen.SKWorldGen;
 import net.lightglow.common.registry.SKEntityType;
 import net.lightglow.common.registry.SKItemsRegistry;
+import net.lightglow.util.SkeletalModelPredicateProvider;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +34,9 @@ public class SkeletalRemains implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(SKEntityType.CHARRED_SKELETON, CharredSkeleton.setAttributes());
 		FabricDefaultAttributeRegistry.register(SKEntityType.SUNKEN_SKELETON, SunkenSkeleton.setAttributes());
 		FabricDefaultAttributeRegistry.register(SKEntityType.FALLEN_SKELETON, FallenSkeleton.setAttributes());
+		FabricDefaultAttributeRegistry.register(SKEntityType.SWAMPED_SKELETON, SwampedSkeleton.setAttributes());
 
+		SkeletalModelPredicateProvider.registerSKModels();
 	}
 	public static Identifier createEntityId(String path) {
 		return new Identifier(MOD_ID, path);

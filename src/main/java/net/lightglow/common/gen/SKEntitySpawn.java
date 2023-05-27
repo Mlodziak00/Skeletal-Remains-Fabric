@@ -50,6 +50,10 @@ public class SKEntitySpawn {
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN), SpawnGroup.MONSTER,
                 SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
 
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP), SpawnGroup.MONSTER,
+                SKEntityType.SWAMPED_SKELETON, CONFIG.swampedweight, CONFIG.swampedminspawn, CONFIG.swampedmaxspawn);
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.SWAMP), SpawnGroup.MONSTER,
+                SKEntityType.SWAMPED_SKELETON, CONFIG.swampedweight, CONFIG.swampedminspawn, CONFIG.swampedmaxspawn);
 
         SpawnRestriction.register(SKEntityType.OVERGROWN_SKELETON, SpawnRestriction.Location.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnInDark);
@@ -59,5 +63,7 @@ public class SKEntitySpawn {
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnInDark);
         SpawnRestriction.register(SKEntityType.SUNKEN_SKELETON, SpawnRestriction.Location.IN_WATER,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SunkenSkeleton::canSpawn);
+        SpawnRestriction.register(SKEntityType.SWAMPED_SKELETON, SpawnRestriction.Location.ON_GROUND,
+                Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnInDark);
     }
 }

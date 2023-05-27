@@ -47,6 +47,16 @@ public class SkeletalConfig implements Config {
     public int sunkenmaxspawn = 3;
 
 
+    @Comment(value = "Rarity of how much the Swamped can spawn (0 to disable)  | default: 100")
+    public int swampedweight = 100;
+
+    @Comment(value = "Minimal amount of Swamped that can spawn.  | default: 1")
+    public int swampedminspawn = 1;
+
+    @Comment(value = "Maximal amount of Swamped that can spawn.  | default: 3")
+    public int swampedmaxspawn = 3;
+
+
     @Override
     public String getName() {
         return SkeletalRemains.MOD_ID + "-common";

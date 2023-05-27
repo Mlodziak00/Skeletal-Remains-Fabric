@@ -3,6 +3,7 @@ package net.lightglow.common.registry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lightglow.SkeletalRemains;
 import net.lightglow.common.special.TidalArrowItem;
+import net.lightglow.common.special.WillOBowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SpawnEggItem;
@@ -29,6 +30,13 @@ public class SKItemsRegistry {
     public static final Item FALLEN_SPAWN_EGG = registerItem("fallen_spawn_egg",
             new SpawnEggItem(SKEntityType.FALLEN_SKELETON, 0x7a7a85, 0xb4b4d4,
                     new FabricItemSettings().group(ItemGroup.MISC)));
+
+    public static final Item SWAMPED_SPAWN_EGG = registerItem("swamped_spawn_egg",
+            new SpawnEggItem(SKEntityType.SWAMPED_SKELETON, 0x212912, 0x1a6117,
+                    new FabricItemSettings().group(ItemGroup.MISC)));
+
+    public static final Item WILL_O_BOW = registerItem("will_o_bow",
+            new WillOBowItem(new FabricItemSettings().group(ItemGroup.COMBAT).maxCount(1).maxDamage(468)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(SkeletalRemains.MOD_ID, name), item);
