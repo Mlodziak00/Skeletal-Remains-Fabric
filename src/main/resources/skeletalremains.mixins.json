@@ -2,8 +2,8 @@
 	"required": true,
 	"package": "net.lightglow.mixin",
 	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-      "SkeletalRemainsMixin"
+	"client": [
+		"FOVMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

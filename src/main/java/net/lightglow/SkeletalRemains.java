@@ -36,7 +36,6 @@ public class SkeletalRemains implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(SKEntityType.FALLEN_SKELETON, FallenSkeleton.setAttributes());
 		FabricDefaultAttributeRegistry.register(SKEntityType.SWAMPED_SKELETON, SwampedSkeleton.setAttributes());
 
-		SkeletalModelPredicateProvider.registerSKModels();
 	}
 	public static Identifier createEntityId(String path) {
 		return new Identifier(MOD_ID, path);
