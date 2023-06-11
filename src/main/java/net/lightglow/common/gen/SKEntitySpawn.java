@@ -9,6 +9,10 @@ import net.lightglow.common.registry.SKEntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.tag.BiomeTags;
+import net.minecraft.tag.TagKey;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.BiomeKeys;
 
@@ -16,43 +20,25 @@ public class SKEntitySpawn {
     public static final SkeletalConfig CONFIG = OmegaConfig.register(SkeletalConfig.class);
     public static void addEntitySpawn() {
 
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE), SpawnGroup.MONSTER,
-                SKEntityType.OVERGROWN_SKELETON, CONFIG.overgrownweight, CONFIG.overgrownminspawn, CONFIG.overgrownmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE), SpawnGroup.MONSTER,
-                SKEntityType.OVERGROWN_SKELETON, CONFIG.overgrownweight, CONFIG.overgrownminspawn, CONFIG.overgrownmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BAMBOO_JUNGLE), SpawnGroup.MONSTER,
+        BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), SpawnGroup.MONSTER,
                 SKEntityType.OVERGROWN_SKELETON, CONFIG.overgrownweight, CONFIG.overgrownminspawn, CONFIG.overgrownmaxspawn);
 
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS), SpawnGroup.MONSTER,
-                SKEntityType.SHARPSHOOTER_SKELETON, CONFIG.sharpshooterweight, CONFIG.sharpshooterminspawn ,CONFIG.sharpshootermaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WOODED_BADLANDS), SpawnGroup.MONSTER,
+        BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_BADLANDS), SpawnGroup.MONSTER,
                 SKEntityType.SHARPSHOOTER_SKELETON, CONFIG.sharpshooterweight, CONFIG.sharpshooterminspawn ,CONFIG.sharpshootermaxspawn);
 
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.NETHER_WASTES), SpawnGroup.MONSTER,
                 SKEntityType.CHARRED_SKELETON, CONFIG.charredweight, CONFIG.charredminspawn, CONFIG.charredmaxspawn);
 
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.LUKEWARM_OCEAN), SpawnGroup.MONSTER,
+        BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_OCEAN), SpawnGroup.MONSTER,
                 SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.MONSTER,
-                SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.OCEAN), SpawnGroup.MONSTER,
-                SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.COLD_OCEAN), SpawnGroup.MONSTER,
-                SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.FROZEN_OCEAN), SpawnGroup.MONSTER,
-                SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.DEEP_FROZEN_OCEAN), SpawnGroup.MONSTER,
-                SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.DEEP_LUKEWARM_OCEAN), SpawnGroup.MONSTER,
-                SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.DEEP_COLD_OCEAN), SpawnGroup.MONSTER,
-                SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN), SpawnGroup.MONSTER,
+        BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_DEEP_OCEAN), SpawnGroup.MONSTER,
                 SKEntityType.SUNKEN_SKELETON, CONFIG.sunkenweight, CONFIG.sunkenminspawn, CONFIG.sunkenmaxspawn);
 
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP), SpawnGroup.MONSTER,
                 SKEntityType.SWAMPED_SKELETON, CONFIG.swampedweight, CONFIG.swampedminspawn, CONFIG.swampedmaxspawn);
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.SWAMP), SpawnGroup.MONSTER,
+                SKEntityType.SWAMPED_SKELETON, CONFIG.swampedweight, CONFIG.swampedminspawn, CONFIG.swampedmaxspawn);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.SWAMP_HUT_HAS_STRUCTURE), SpawnGroup.MONSTER,
                 SKEntityType.SWAMPED_SKELETON, CONFIG.swampedweight, CONFIG.swampedminspawn, CONFIG.swampedmaxspawn);
 
         SpawnRestriction.register(SKEntityType.OVERGROWN_SKELETON, SpawnRestriction.Location.ON_GROUND,
