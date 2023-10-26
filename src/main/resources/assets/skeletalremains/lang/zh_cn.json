@@ -1,0 +1,18 @@
+{
+  "entity.skeletalremains.overgrownskeleton": "密林骷髅",
+  "entity.skeletalremains.sharpshooterskeleton": "神射骷髅",
+  "entity.skeletalremains.charredskeleton": "焦黑骷髅",
+  "entity.skeletalremains.sunkenskeleton": "沉溺骷髅",
+  "entity.skeletalremains.fallenskeleton": "堕落骷髅",
+  "entity.skeletalremains.swampedskeleton": "沼泽骷髅",
+
+  "item.skeletalremains.overgrown_spawn_egg": "密林骷髅刷怪蛋",
+  "item.skeletalremains.sharpshooter_spawn_egg": "神射骷髅刷怪蛋",
+  "item.skeletalremains.charred_spawn_egg": "焦黑骷髅刷怪蛋",
+  "item.skeletalremains.sunken_spawn_egg": "沉溺骷髅刷怪蛋",
+  "item.skeletalremains.fallen_spawn_egg": "堕落骷髅刷怪蛋",
+  "item.skeletalremains.swamped_spawn_egg": "沼泽骷髅刷怪蛋",
+  "item.skeletalremains.tidal_arrow": "潮汐之箭",
+  "item.skeletalremains.will_o_bow": "飘渺之弓"
+
+}
